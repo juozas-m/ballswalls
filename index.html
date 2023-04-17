@@ -1,0 +1,49 @@
+<style>
+    body{
+        margin : 0;
+        font-family: sans-serif; 
+        overflow: hidden;
+    }
+</style>
+
+
+
+<h1 style="position: absolute; color: white; padding: 8px; text-align: center; font-size: 40px; cursor: pointer; ">Play</h1>
+<h2 style="position: absolute; color: lightgray; font-size: 25px; padding: 8px; margin: 2px">Balls & Walls</h2>
+<div class="main"></div>
+
+<div class="overlay score" style="position:absolute; color: white;">
+    <span style="font-size: 30px"> <span id="score1" style="color: yellow">0</span> / <span id="score2" style="color: blue;">0</span> </span>
+</div>
+
+<div
+    id="modal"
+    style="
+        display: none;
+        position:absolute;
+        background-color: white;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        left: 50%;
+        padding: 16px;
+        max-width: 500px;
+        width: 100%;
+        text-align: center;
+        border-radius: 5px;
+    "
+>
+    <label style="font-size: 14px; color: gray;">Game Over!</label>
+    <button id="button" style="margin-left: 5px; background-color:blue; border: none; color:white; padding: 5px 10px; border-radius: 5px; cursor:pointer">Restart</button>
+</div>
+
+<div class="circle"></div>
+<div class="circle2"></div>
+<div class="ball"></div>
+
+
+
+<canvas></canvas>
+
+<link rel="stylesheet" href="index.css">
+<script src="./index.js"></script>
+
