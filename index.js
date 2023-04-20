@@ -111,14 +111,14 @@ function mover(){
         score1.innerHTML = s2;
         modal.style.display = 'block';
     }
-    if((((b.x) >= (canvas.width - 40/*b.w*/)) /*&& (ind == 1)*/) || (b.x < 0)){
+    if((((b.x) >= (canvas.width - 40/*b.w*/)) /*&& (ind == 1)*/) || (b.x < 40 - canvas.width)){
         b.dx *= -1;
         b.w += 20;
         b.h += 20;
         ball.style.width = `${b.w}px`; //
         ball.style.height = `${b.h}px`;
     }
-    if((((b.y) >= (canvas.height - 40/*b.h*/)) /*&& (ind == 0)*/) || (b.y < 0)){
+    if((((b.y) >= (canvas.height - 40/*b.h*/)) /*&& (ind == 0)*/) || (b.y < 40 - canvas.height)){
         b.dy *= -1;
         b.w += 20;
         b.h += 20;
@@ -205,7 +205,7 @@ window.addEventListener('keydown', (e) =>{
         case 37:
             clearInterval(intervalId);
             intervalId = setInterval(() =>{
-                if(parseInt(circle.style.left) - moveBy >= -20){
+                if(parseInt(circle.style.left) - moveBy >= 0){
                     xp -= moveBy;
                     circle.style.left = parseInt(circle.style.left) - moveBy + 'px';
                 }
@@ -229,7 +229,7 @@ window.addEventListener('keydown', (e) =>{
         case 38:
             clearInterval(intervalId);
             intervalId = setInterval(() =>{
-                if(parseInt(circle.style.top) - moveBy >= -20){
+                if(parseInt(circle.style.top) - moveBy >= 0){
                     yp -= moveBy;
                     circle.style.top = parseInt(circle.style.top) - moveBy + 'px';
                 }
@@ -259,7 +259,7 @@ window.addEventListener('keydown', (e) =>{
         case 65:
             clearInterval(intervalId2);
             intervalId2 = setInterval(() =>{
-                if(parseInt(circle2.style.left) - moveBy >= -20){
+                if(parseInt(circle2.style.left) - moveBy >= 0){
                     xp2 -= moveBy;
                     circle2.style.left = parseInt(circle2.style.left) - moveBy + 'px';
                 }
@@ -283,7 +283,7 @@ window.addEventListener('keydown', (e) =>{
         case 87:
             clearInterval(intervalId2);
             intervalId2 = setInterval(() =>{
-                if(parseInt(circle2.style.top) - moveBy >= -20){
+                if(parseInt(circle2.style.top) - moveBy >= 0){
                     yp2 -= moveBy;
                     circle2.style.top = parseInt(circle2.style.top) - moveBy + 'px';
                 }
