@@ -111,14 +111,14 @@ function mover(){
         score1.innerHTML = s2;
         modal.style.display = 'block';
     }
-    if((((b.x) >= (canvas.width - 40/*b.w*/)) /*&& (ind == 1)*/) || (b.x <= -30)){
+    if((((b.x) >= (canvas.width - 40/*b.w*/)) /*&& (ind == 1)*/) || (b.x <= -100)){
         b.dx *= -1;
         b.w += 20;
         b.h += 20;
         ball.style.width = `${b.w}px`; //
         ball.style.height = `${b.h}px`;
     }
-    if((((b.y) >= (canvas.height - 40/*b.h*/)) /*&& (ind == 0)*/) || (b.y <= -30)){
+    if((((b.y) >= (canvas.height - 40/*b.h*/)) /*&& (ind == 0)*/) || (b.y <= -100)){
         b.dy *= -1;
         b.w += 20;
         b.h += 20;
