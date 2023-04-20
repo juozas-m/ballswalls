@@ -205,7 +205,7 @@ window.addEventListener('keydown', (e) =>{
         case 37:
             clearInterval(intervalId);
             intervalId = setInterval(() =>{
-                if(parseInt(circle.style.left) - moveBy >= 20 - canvas.width){
+                if(parseInt(circle.style.left) - moveBy >= -20){
                     xp -= moveBy;
                     circle.style.left = parseInt(circle.style.left) - moveBy + 'px';
                 }
@@ -229,7 +229,7 @@ window.addEventListener('keydown', (e) =>{
         case 38:
             clearInterval(intervalId);
             intervalId = setInterval(() =>{
-                if(parseInt(circle.style.top) - moveBy >= 20 - canvas.height){
+                if(parseInt(circle.style.top) - moveBy >= -20){
                     yp -= moveBy;
                     circle.style.top = parseInt(circle.style.top) - moveBy + 'px';
                 }
@@ -259,7 +259,7 @@ window.addEventListener('keydown', (e) =>{
         case 65:
             clearInterval(intervalId2);
             intervalId2 = setInterval(() =>{
-                if(parseInt(circle2.style.left) - moveBy >= 20 - canvas.width){
+                if(parseInt(circle2.style.left) - moveBy >= -20){
                     xp2 -= moveBy;
                     circle2.style.left = parseInt(circle2.style.left) - moveBy + 'px';
                 }
@@ -283,7 +283,7 @@ window.addEventListener('keydown', (e) =>{
         case 87:
             clearInterval(intervalId2);
             intervalId2 = setInterval(() =>{
-                if(parseInt(circle2.style.top) - moveBy >= 20 - canvas.height){
+                if(parseInt(circle2.style.top) - moveBy >= -20){
                     yp2 -= moveBy;
                     circle2.style.top = parseInt(circle2.style.top) - moveBy + 'px';
                 }
